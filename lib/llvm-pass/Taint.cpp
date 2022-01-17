@@ -7,7 +7,7 @@
 #include "llvm/IR/LegacyPassManager.h"
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 
-#include <nlohmann/json.hpp>
+#include </usr/local/json/single_include/nlohmann/json.hpp>
 #include "llvm/IR/DebugInfoMetadata.h"
 #include "llvm/IR/IRBuilder.h"
 #include "llvm/Transforms/Instrumentation.h"
