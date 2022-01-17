@@ -1,6 +1,16 @@
 # action.yml
-name: 'Build TaintImpact'
-description: 'Build TaintImpact using cmake'
+name: 'TaintImpact'
+description: 'Build project with dfsan and run TaintImpact on executable file.'
+inputs:
+  who-to-greet:  # id of input
+    description: 'File to execute'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
