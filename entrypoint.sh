@@ -6,5 +6,6 @@ echo "::set-output name=time::$time"
 
  #build project here
 
-echo ${GITHUB_REF##*/}
+branch=${GITHUB_REF##*/}
+echo $(git diff master $branch)
 #Execute taint impact here ?
