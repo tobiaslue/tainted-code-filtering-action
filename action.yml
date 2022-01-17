@@ -1,6 +1,6 @@
 # action.yml
 name: 'TaintImpact'
-description: 'Build project with dfsan and run TaintImpact on executable file.'
+description: 'Run TaintImpact on this branch and master.'
 inputs:
   who-to-greet:  # id of input
     description: 'File to execute'
