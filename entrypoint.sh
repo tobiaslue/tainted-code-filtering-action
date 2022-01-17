@@ -9,6 +9,6 @@ echo "::set-output name=time::$time"
 branch=${GITHUB_REF##*/}
 echo $(git branch)
 echo $(git diff HEAD^..HEAD)
-echo $(git diff --name-only origin/main origin/${GITHUB_HEAD_REF})
+echo $(git diff --name-only origin/master origin/${GITHUB_HEAD_REF})
 echo $(git diff master $branch)
 #Execute taint impact here ?
