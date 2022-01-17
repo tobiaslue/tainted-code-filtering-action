@@ -18,7 +18,7 @@ RUN git clone https://github.com/nlohmann/json.git\
     && cd /usr/local/json\
     && cmake .
 
-RUN chmod +x /opt/llvm/bin/clang++1
+RUN sudo chmod +x /opt/llvm/bin/clang++1
 ENV PATH=/opt/llvm/bin/:$PATH
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
