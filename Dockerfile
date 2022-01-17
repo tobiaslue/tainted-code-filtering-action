@@ -4,6 +4,7 @@ FROM mcopik/clang-dfsan:dfsan-9.0
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 COPY lib /lib
+COPY bin/clang++1 /opt/llvm/bin
 
 RUN deps='cmake build-essential xz-utils curl git'\
     && sudo apt-get -y update\
@@ -16,6 +17,9 @@ RUN git clone https://github.com/nlohmann/json.git\
     && sudo mv json /usr/local\
     && cd /usr/local/json\
     && cmake .
+
+RUN chmod +x /opt/llvm/bin/clang++1
+ENV PATH=/opt/llvm/bin/:$PATH
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
