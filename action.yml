@@ -11,6 +11,6 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'tobiaslue/taint-impact:0.1'
   args:
     - ${{ inputs.who-to-greet }}
