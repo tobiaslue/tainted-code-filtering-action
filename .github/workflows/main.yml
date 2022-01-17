@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Build TaintImpact
         uses: ./ # Uses an action in the root directory
-        id: biuld_taint_impact
+        id: build_taint_impact
