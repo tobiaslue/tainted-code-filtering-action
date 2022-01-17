@@ -49,7 +49,8 @@ file(GLOB TaintPassFiles
 
 add_library(TaintPass MODULE ${TaintPassFiles})
 set_property(TARGET TaintPass PROPERTY CXX_STANDARD 14)
-set_target_properties(TaintPass PROPERTIES POSITION_INDEPENDENT_CODE On)
+set_target_properties(TaintPass PROPERTIES LINKER_LANGUAGE CXX )
+set_target_properties(TaintPass PROPERTIES POSITION_INDEPENDENT_CODE On )
 set_target_properties(TaintPass PROPERTIES COMPILE_FLAGS "-fno-rtti -g -fsanitize-blacklist=${CMAKE_SOURCE_DIR}/share/dfsan_abilist.txt")
 set_target_properties(TaintPass PROPERTIES LIBRARY_OUTPUT_DIRECTORY lib)
 target_link_libraries(TaintPass PRIVATE nlohmann_json::nlohmann_json)
