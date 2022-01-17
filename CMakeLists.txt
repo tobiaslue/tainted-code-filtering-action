@@ -54,9 +54,9 @@ set_target_properties(TaintPass PROPERTIES COMPILE_FLAGS "-fno-rtti -g -fsanitiz
 set_target_properties(TaintPass PROPERTIES LIBRARY_OUTPUT_DIRECTORY lib)
 target_link_libraries(TaintPass PRIVATE nlohmann_json::nlohmann_json)
 
-configure_file(bin/rpass.in bin/rpass @ONLY)
-configure_file(bin/clang++.in bin/clang++ @ONLY)
-configure_file(bin/clang.in bin/clang @ONLY)
+# configure_file(bin/rpass.in bin/rpass @ONLY)
+# configure_file(bin/clang++.in bin/clang++ @ONLY)
+# configure_file(bin/clang.in bin/clang @ONLY)
 
 
 
