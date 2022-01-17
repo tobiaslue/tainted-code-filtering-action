@@ -2,10 +2,11 @@
 FROM mcopik/clang-dfsan:dfsan-9.0
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY entrypoint.sh /entrypoint.sh
-COPY lib /lib
+COPY entrypoint.sh ./entrypoint.sh
+COPY lib ./lib
 COPY bin/clang++1 /opt/llvm/bin
-COPY CMakeLists.txt .
+COPY CMakeLists.txt ./CMakeLists.txt 
+COPY share ./share
 
 RUN deps='cmake build-essential xz-utils curl git'\
     && sudo apt-get -y update\
@@ -25,7 +26,7 @@ RUN cmake\
     -DLLVM_DIR=/opt/llvm\
     -DLIBCXX_PATH=/opt/llvm/lib\
     -DJSONCPP_PATH=/usr/local/json\
-    && make
+    && sudo make
 
 RUN sudo chmod +x /opt/llvm/bin/clang++1
 ENV PATH=/opt/llvm/bin/:$PATH
