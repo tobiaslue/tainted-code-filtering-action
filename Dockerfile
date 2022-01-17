@@ -18,6 +18,14 @@ RUN git clone https://github.com/nlohmann/json.git\
     && cd /usr/local/json\
     && cmake .
 
+RUN cmake\
+    -DCAMKE_C_COMPILER=/usr/local/clang_9.0.0/bin/clang\
+    -DCMAKE_CXX_COMPILER=/usr/local/clang_9.0.0/bin/clang++\
+    -DLLVM_DIR=/opt/llvm\
+    -DLIBCXX_PATH=/opt/llvm/lib\
+    -DJSONCPP_PATH=/usr/local/json\
+    && make
+
 RUN sudo chmod +x /opt/llvm/bin/clang++1
 ENV PATH=/opt/llvm/bin/:$PATH
 
