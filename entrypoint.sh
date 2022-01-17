@@ -8,5 +8,6 @@ echo "::set-output name=time::$time"
 
 branch=${GITHUB_REF##*/}
 echo $(git branch)
+echo $(HEAD^..HEAD)
 echo $(git diff master $branch)
 #Execute taint impact here ?
