@@ -5,6 +5,8 @@ time=$(date)
 echo "::set-output name=time::$time"
 
  #build project here
+ls
+tree /
 cd /
 mkdir code 
 cd code
