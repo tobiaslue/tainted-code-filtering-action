@@ -2,9 +2,10 @@
 
 # Execute here
 ls -ld
-chmod +w .
 tree /
 cd ~/
+chmod +w .
+
 mkdir code 
 cd code
 git clone git@github.com:tobiaslue/tainted-code-filtering-action.git
