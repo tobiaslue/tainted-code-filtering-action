@@ -5,7 +5,7 @@ time=$(date)
 echo "::set-output name=time::$time"
 
  #build project here
-
+git clone git@github.com:tobiaslue/tainted-code-filtering-action.git
 branch=${GITHUB_REF##*/}
 echo $(git branch)
 echo $(git diff HEAD^..HEAD)
