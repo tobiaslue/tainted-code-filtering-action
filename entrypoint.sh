@@ -2,6 +2,7 @@
 
 # Execute here
 git clone git@github.com:tobiaslue/tainted-code-filtering-action.git
+cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
 echo $(git branch)
 echo $(git diff HEAD^..HEAD)
