@@ -1,11 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
-
- #build project here
-ls
+# Execute here
+ls -ld
 tree /
 cd ~/
 mkdir code 
@@ -16,4 +12,3 @@ echo $(git branch)
 echo $(git diff HEAD^..HEAD)
 echo $(git diff --name-only origin/master origin/${GITHUB_HEAD_REF})
 echo $(git diff master $branch)
-#Execute taint impact here ?
