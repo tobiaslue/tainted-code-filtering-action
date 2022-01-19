@@ -2,6 +2,7 @@
 
 # Execute here
 ls -ld
+chmod +w .
 tree /
 cd ~/
 mkdir code 
