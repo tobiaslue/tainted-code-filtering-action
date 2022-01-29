@@ -8,6 +8,6 @@ sudo git fetch
 sudo git checkout $branch
 echo $(ls)
 echo $(git branch)
-echo $(git diff HEAD^..HEAD)
-echo $(git diff --name-only master ${GITHUB_HEAD_REF})
+# echo $(git diff HEAD^..HEAD)
+# echo $(git diff --name-only master ${GITHUB_HEAD_REF})
 echo $(git diff master $branch)
