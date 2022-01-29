@@ -4,6 +4,8 @@
 sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
+git fetch
+git checkout $branch
 echo $(ls)
 echo $(git branch)
 echo $(git diff HEAD^..HEAD)
