@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 # Execute here
-sudo git clone git@github.com:tobiaslue/tainted-code-filtering-action.git
+sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
 echo $(git branch)
