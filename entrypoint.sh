@@ -6,4 +6,4 @@ cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
 sudo git checkout $branch
 
-python3 /home/docker/parse-diff.py master branch test.cpp
+sudo python3 /home/docker/parse-diff.py master branch test.cpp
