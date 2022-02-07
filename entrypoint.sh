@@ -7,7 +7,3 @@ branch=${GITHUB_REF##*/}
 sudo git checkout $branch
 
 sudo python3 /home/docker/parse-diff.py master $branch
-
-sudo cmake\
-    -DCMAKE_CXX_COMPILER=/opt/llvm/bin/clang++1\
-    && sudo make
