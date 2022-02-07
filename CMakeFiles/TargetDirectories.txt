@@ -1,0 +1,3 @@
+/home/tobiaslue/tainted-code-filtering-action/CMakeFiles/rebuild_cache.dir
+/home/tobiaslue/tainted-code-filtering-action/CMakeFiles/edit_cache.dir
+/home/tobiaslue/tainted-code-filtering-action/CMakeFiles/TestLibrary.dir
