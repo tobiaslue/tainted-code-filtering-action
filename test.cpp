@@ -6,5 +6,5 @@ int main(){
 
 int test(int x){
     int z = 5;
-    return z + 1;
+    return z + 2;
 }
