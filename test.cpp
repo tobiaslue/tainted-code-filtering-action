@@ -1,6 +1,6 @@
 int test(int x){
     int z = 5;
-    return z + 2;
+    return z + 3;
 }
 
 int main(){
