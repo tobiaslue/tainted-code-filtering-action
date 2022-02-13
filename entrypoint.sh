@@ -10,7 +10,7 @@ cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
 #sudo git checkout $branch
 sudo git checkout test_branch
-sudo python3 /home/docker/parse-diff.py master test_branch
+sudo python3 /home/docker/parse-diff.py master $branch
 
 echo {} > /home/docker/tainted_functions.json
 sudo cmake\
