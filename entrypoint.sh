@@ -4,7 +4,7 @@ set -o xtrace
 # Execute here
 # sudo chown -R docker .
 # chmod -R 700 .
-# mkdir tmp
+mkdir tmp
 sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
