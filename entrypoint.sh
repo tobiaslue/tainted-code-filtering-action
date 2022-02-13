@@ -12,7 +12,6 @@ branch=${GITHUB_REF##*/}
 sudo git checkout test_branch
 sudo python3 /home/docker/parse-diff.py master test_branch
 
-
 echo {} > /home/docker/tainted_functions.json
 sudo cmake\
     -DCMAKE_CXX_COMPILER=/opt/llvm/bin/clang++1\
