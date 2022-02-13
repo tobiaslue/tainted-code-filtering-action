@@ -13,6 +13,7 @@ sudo git checkout test_branch
 sudo python3 /home/docker/parse-diff.py master test_branch
 
 
+
 echo $(ls)
 echo {} > /home/docker/tainted_functions.json
 sudo cmake\
