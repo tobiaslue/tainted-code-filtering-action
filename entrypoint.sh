@@ -19,4 +19,5 @@ sudo cmake\
     && sudo make
 
 echo {} > /home/docker/tainted_functions.json
-./TestLibrary
+# ./TestLibrary
+# cat /home/docker/tainted_functions.json
