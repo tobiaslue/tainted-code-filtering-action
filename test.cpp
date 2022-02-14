@@ -4,7 +4,7 @@ int test(int x){
 }
 
 int main(){
-    int x = 6;
+    int x = 7;
     int y = test(x);
     return y;
 }
