@@ -8,8 +8,8 @@ mkdir /home/docker/tmp
 sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
-#sudo git checkout $branch
 sudo git checkout $branch
+# sudo git checkout test
 sudo python3 /home/docker/parse-diff.py master $branch
 
 echo {} > /home/docker/tainted_functions.json
