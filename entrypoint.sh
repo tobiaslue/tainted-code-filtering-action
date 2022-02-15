@@ -1,7 +1,6 @@
 #!/bin/bash
 set -o xtrace
 
-echo $1
 # Execute here
 # sudo chown -R docker .
 # chmod -R 700 .
@@ -17,9 +16,8 @@ sudo python3 /home/docker/parse-diff.py master test
 echo {} > /home/docker/tainted_functions.json
 echo "1" > /home/docker/counter.txt
 
-sudo cmake\
-    -DCMAKE_CXX_COMPILER=/opt/llvm/bin/clang++1\
-    && sudo make
+$1
+
 
 echo {} > /home/docker/tainted_functions.json
 ./TestLibrary
