@@ -28,5 +28,6 @@ echo "2" > /home/docker/counter.txt
 
 sudo make clean
 sudo make
-
+./TestLibrary
+cat /home/docker/tainted_lines.json
 # Create a file with value 0 for the first compile. Change to 1 after the first execution. in the wrapper, check the value of the file, and change the passes based on the value.
