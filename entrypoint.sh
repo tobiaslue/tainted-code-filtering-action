@@ -17,7 +17,7 @@ echo {} > /home/docker/tainted_functions.json
 echo "1" > /home/docker/counter.txt
 
 # chmod +x ./$1
-sudo ./$1
+sudo ${{ github.repository }}/$1
 
 
 echo {} > /home/docker/tainted_functions.json
