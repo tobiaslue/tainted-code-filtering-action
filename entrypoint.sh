@@ -2,7 +2,7 @@
 set -o xtrace
 
 mkdir /home/docker/tmp
-sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
+sudo git clone $6
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
 sudo git checkout $branch

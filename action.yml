@@ -18,6 +18,9 @@ inputs:
     description: "The default branch of the repository."
     required: false
     default: "master"
+  repository-url:
+    description: "The url of the repository. Will be clone using ssh."
+    required: true
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -29,3 +32,4 @@ runs:
     - ${{ inputs.build-command }}
     - ${{ inputs.execute-command }}   
     - ${{ inputs.clean-command }}
+    - ${{ inputs.repository-url }}
