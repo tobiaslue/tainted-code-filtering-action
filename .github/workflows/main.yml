@@ -20,3 +20,4 @@ jobs:
           build-command: "sudo make"
           execute-command: "./TestLibrary"
           clean-command: "sudo make clean"
+          default-branch: "master"

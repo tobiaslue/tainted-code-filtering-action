@@ -14,6 +14,10 @@ inputs:
   clean-command:
     description: 'The command to clean up build files. Eg make clean'
     required: false
+  default-branch:
+    description: "The default branch of the repository."
+    required: false
+    default: "master"
 outputs:
   time: # id of output
     description: 'The time we greeted you'

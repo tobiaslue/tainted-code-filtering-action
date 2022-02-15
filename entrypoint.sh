@@ -1,16 +1,12 @@
 #!/bin/bash
 set -o xtrace
 
-# Execute here
-# sudo chown -R docker .
-# chmod -R 700 .
 mkdir /home/docker/tmp
 sudo git clone https://github.com/tobiaslue/tainted-code-filtering-action.git
 cd tainted-code-filtering-action
 branch=${GITHUB_REF##*/}
-# sudo git checkout $branch
-sudo git checkout test
-sudo python3 /home/docker/parse-diff.py master test
+sudo git checkout $branch
+sudo python3 /home/docker/parse-diff.py $5 $branch
 
 
 echo {} > /home/docker/tainted_functions.json
