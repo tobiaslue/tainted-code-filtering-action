@@ -2,8 +2,8 @@
 set -o xtrace
 
 mkdir /home/docker/tmp
-sudo git clone $6
-cd tainted-code-filtering-action
+sudo git clone $6 repository
+cd repository
 branch=${GITHUB_REF##*/}
 sudo git checkout $branch
 sudo python3 /home/docker/parse-diff.py $5 $branch

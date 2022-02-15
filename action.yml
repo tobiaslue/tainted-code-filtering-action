@@ -32,4 +32,5 @@ runs:
     - ${{ inputs.build-command }}
     - ${{ inputs.execute-command }}   
     - ${{ inputs.clean-command }}
+    - ${{ inputs.default-branch }}
     - ${{ inputs.repository-url }}
