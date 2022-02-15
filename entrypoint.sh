@@ -16,7 +16,9 @@ sudo python3 /home/docker/parse-diff.py master test
 echo {} > /home/docker/tainted_functions.json
 echo "1" > /home/docker/counter.txt
 
-$1
+chmod +x /home/docker/$1
+
+/home/docker/$1
 
 
 echo {} > /home/docker/tainted_functions.json
