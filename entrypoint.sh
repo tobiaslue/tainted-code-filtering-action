@@ -16,9 +16,8 @@ sudo python3 /home/docker/parse-diff.py master test
 echo {} > /home/docker/tainted_functions.json
 echo "1" > /home/docker/counter.txt
 
-# chmod +x ./$1
-sudo ${{ github.repository }}/$1
-
+$1
+$2
 
 echo {} > /home/docker/tainted_functions.json
 ./TestLibrary
