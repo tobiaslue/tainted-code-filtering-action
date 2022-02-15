@@ -1,6 +1,7 @@
 #!/bin/bash
 set -o xtrace
 
+echo $1
 # Execute here
 # sudo chown -R docker .
 # chmod -R 700 .
