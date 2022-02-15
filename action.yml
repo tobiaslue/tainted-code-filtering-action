@@ -2,14 +2,18 @@
 name: 'TaintImpact'
 description: 'Run TaintImpact on this branch and master.'
 inputs:
-  who-to-greet:  # id of input
-    description: 'File to execute'
+  config-command:
+    description: 'The command to configure the build. E.g. cmake...'
+    required: false
+  build-command: 
+    description: 'The command to build the project. E.g. make'
     required: true
-    default: 'World'
-  build-command:  # id of input
-    description: 'File to execute'
+  execute-command:
+    description: "The command to execute the program."
     required: true
-    default: 'World'
+  clean-command:
+    description: 'The command to clean up build files. Eg make clean'
+    required: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -17,5 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.config-command }}
     - ${{ inputs.build-command }}
+    - ${{ inputs.execute-command }}   
+    - ${{ inputs.clean-command }}
