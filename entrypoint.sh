@@ -4,9 +4,9 @@ set -o xtrace
 mkdir /home/docker/tmp
 sudo git clone $6 repository
 cd repository
-branch=${GITHUB_REF##*/}
-sudo git checkout $branch
-sudo python3 /home/docker/parse-diff.py $5 $branch
+# branch=${GITHUB_REF##*/}
+sudo git checkout Test_gcd
+sudo python3 /home/docker/parse-diff.py $5 Test_gcd
 
 
 echo {} > /home/docker/tainted_functions.json
@@ -25,4 +25,5 @@ echo "2" > /home/docker/counter.txt
 $4 && $2 && $3
 
 cat /home/docker/tainted_lines.json
-# Create a file with value 0 for the first compile. Change to 1 after the first execution. in the wrapper, check the value of the file, and change the passes based on the value.
+
+# /entrypoint.sh "sudo cmake  -DCMAKE_CXX_COMPILER=/opt/llvm/bin/clang++1" "sudo make"  "./TestLibrary" "sudo make clean" master "https://github.com/tobiaslue/C-Plus-Plus.git"
